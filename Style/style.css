@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --bodyBackgroundColor: hsl(27, 66%, 92%); */
+    --primaryColor: hsl(10, 79%, 65%);
+    --secondaryColor: hsl(186, 34%, 60%);
+    --Darkbrown: hsl(25, 47%, 15%);
+    --Mediumbrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Verypaleorange: hsl(33, 100%, 98%);
+}
+
+.body {
+    background-color: var(--Cream);
+    height: 100vh;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-container {
+    max-width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-header {
+    background-color: var(--primaryColor);
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card-header .header-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: #fff;
+    align-items: left;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.header-left p {
+    font-size: small;
+    margin-bottom: 6px;
+}
+
+.header-left h2 {
+    font-size: 1.5rem;
+}
+
+.card-header .header-right {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.header-right .circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.header-right .white-circle {
+    border: 1px solid #fff;
+    position: absolute;
+    left: 65%;
+}
+
+.header-right .brown-circle {
+    background-color: var(--Darkbrown);
+}
+
+.card-body {
+    /* border: 1px solid blue; */
+    border-radius: 12px;
+    background-color: var(--Verypaleorange);
+    width: 100%;
+}
+
+.card-body .week-info {
+    padding: 20px 20px;
+}
+
+.card-body .bar-container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bar-container .bar-pole {
+    height: 150px;
+    width: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bar-pole .bars {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primaryColor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+
+.currentDayBarColor{
+    background-color: var(--secondaryColor);
+}
+
+/* .bar-pole .bars:hover {
+   background-color: #FF9B87;
+   transition: 0.5s;
+} */
+
+.bar-pole .bars .hover-info
+{
+    height: 28px;
+    width: 50px;
+    border: 1px solid black;
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    background-color: #392414;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: none;
+    transition: 0.5s;
+}
+
+.bar-pole .days {
+    text-align: center;
+    font-size: small;
+    color: var(--Mediumbrown);
+    margin-top: 5px;
+}
+
+.month-info {
+    display: flex;
+}
+
+.month-info-left {
+    width: 50%;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.month-info-left p {
+    font-size: small;
+    color: var(--Mediumbrown);
+}
+
+.month-info-left h1 {
+    font-weight: 700;
+}
+
+.month-info-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px 20px;
+}
+
+.month-info-right p {
+    font-size: medium;
+    font-weight: 700;
+}
+
+.month-info-right h5 {
+    font-size: small;
+    color: var(--Mediumbrown);
+    text-align: end;
+}
+
+@media only screen and (max-width: 475px)
+{
+    body {
+        padding: 0 15px;
+    }
+
+    .header-right .white-circle {
+        left: 61%;
+    }
+}
+
+.attribution
+{
+    font-size: 14px;
+    text-align: center;
+     margin-bottom: 20px;
+}
+
+
+
+
+
